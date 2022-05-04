@@ -4,12 +4,12 @@
 import PackageDescription
 
 private let remoteDependencies: [Package.Dependency] = [
-    .package(url: "https://github.com/arman095095/Managers.git", branch: "develop"),
+    .package(url: "https://github.com/arman095095/ModelInterfaces.git", branch: "develop"),
     .package(url: "https://github.com/arman095095/Module.git", branch: "develop"),
 ]
 
 private let localDependencies: [Package.Dependency] = [
-    .package(path: "/Users/armancarhcan/Desktop/Workdir/Managers"),
+    .package(path: "/Users/armancarhcan/Desktop/Workdir/ModelInterfaces"),
     .package(path: "/Users/armancarhcan/Desktop/Workdir/Module"),
 ]
 
@@ -31,6 +31,6 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "ProfileRouteMap",
-            dependencies: [.product(name: "Module", package: "Module"), .product(name: "Managers", package: "Managers")]),
+            dependencies: [.product(name: "Module", package: "Module"), .product(name: "ModelInterfaces", package: "ModelInterfaces")]),
     ]
 )

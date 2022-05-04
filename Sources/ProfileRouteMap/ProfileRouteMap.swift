@@ -1,6 +1,6 @@
 
 import Module
-import Managers
+import ModelInterfaces
 
 public protocol ProfileRouteMap: AnyObject {
     func currentAccountModule(profile: ProfileModelProtocol) -> ProfileModule
