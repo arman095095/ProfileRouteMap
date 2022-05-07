@@ -1,6 +1,7 @@
 
 import Module
 import ModelInterfaces
+import Foundation
 
 public protocol ProfileRouteMap: AnyObject {
     func rootAccountModule(profile: ProfileModelProtocol) -> ProfileModule
@@ -11,14 +12,15 @@ public protocol ProfileModuleInput: AnyObject {
     
 }
 
+@objc
 public protocol ProfileModuleOutput: AnyObject {
-    func ignoredProfile()
+    @objc optional func ignoredProfile()
     
-    func deniedProfile()
+    @objc optional func deniedProfile()
     
-    func acceptedProfile()
+    @objc optional func acceptedProfile()
     
-    func requestedProfile()
+    @objc optional func requestedProfile()
 }
 
 public typealias ProfileModule = Module<ProfileModuleInput, ProfileModuleOutput>
