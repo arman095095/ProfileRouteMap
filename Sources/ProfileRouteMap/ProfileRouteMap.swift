@@ -12,13 +12,13 @@ public protocol ProfileModuleInput: AnyObject {
 }
 
 public protocol ProfileModuleOutput: AnyObject {
-    func ignoreProfile()
+    func ignoredProfile()
     
-    func denyProfile()
+    func deniedProfile()
     
-    func acceptProfile()
+    func acceptedProfile()
     
-    func requestProfile()
+    func requestedProfile()
 }
 
 public typealias ProfileModule = Module<ProfileModuleInput, ProfileModuleOutput>
